@@ -1,0 +1,22 @@
+[
+	{
+		"section": "Latest News",
+		"items": [
+			{ "title": "2023 Best Beaches Contest Winners" },
+			{ "title": "Top 10 Diving Spots" },
+			{ "title": "Fishing ban to be implemented this year" },
+			{ "title": "Lifeguard saves child from drowning" }
+		]
+	},
+	{
+		"section": "Vaction Tips",
+		"items": [
+			{ "title": "What to bring on the beach" },
+			{ "title": "Planning Fun Activities" },
+			{ "title": "Diving Checklist" },
+			{ "title": "First Aid" },
+			{ "title": "How to Build a Sand Castle" },
+			{ "title": "Tanning Tips" }
+		]
+	}
+]
