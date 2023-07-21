@@ -1,5 +1,5 @@
-[
-	{
+{
+	"1": {
 		"section": "Latest News",
 		"items": [
 			{ "title": "2023 Best Beaches Contest Winners" },
@@ -8,7 +8,7 @@
 			{ "title": "Lifeguard saves child from drowning" }
 		]
 	},
-	{
+	"2": {
 		"section": "Vaction Tips",
 		"items": [
 			{ "title": "What to bring on the beach" },
@@ -19,4 +19,4 @@
 			{ "title": "Tanning Tips" }
 		]
 	}
-]
+}

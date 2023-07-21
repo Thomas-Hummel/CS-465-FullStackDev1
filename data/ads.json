@@ -1,10 +1,10 @@
-[
-  {
+{
+  "Crews": {
     "title": "Our Crews",
-    "description": "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a arcu ipsum. </p>"
+    "description": "<p> I'm a description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a arcu ipsum. </p>"
   },
-  {
+  "Amenities": {
     "title": "Amenities",
     "description": "<p> Phasellus porta ultrices lorem vel luctus.Cras sodales nulla vitae eros fermentum consequat. Aenean at purus odio. </p>"
   }
-]
+}

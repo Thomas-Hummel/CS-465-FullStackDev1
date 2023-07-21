@@ -1,6 +1,6 @@
 /* Get the blog article information from a JSON data file */
 var fs = require('fs');
-var blogArticles = JSON.parse(fs.readFileSync('./data/blog_articles.json', 'utf8'));
+var blogArticles = JSON.parse(fs.readFileSync('./data/blogArticles.json', 'utf8'));
 
 /* GET home view */
 const home = (req, res) => {
