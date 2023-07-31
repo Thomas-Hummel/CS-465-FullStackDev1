@@ -1,12 +1,49 @@
-/* Get the ad information from a JSON data file */
-var fs = require('fs');
-var ads = JSON.parse(fs.readFileSync('./data/ads.json', 'utf8'));
+const request = require('request');
+const apiOptions = {
+    server: 'http://localhost:3000'
+};
+
+const renderAbout = (req, res, responseBody) => {
+    let message = null;
+    let pageTitle = process.env.npm_package_description + ' - About';
+
+    if (!(responseBody instanceof Array)) {
+        message = 'API lookup error';
+        responseBody = [];
+    } else {
+        if (!responseBody.length) {
+            message = 'No ads exist in our database!';
+        }
+    }
+    res.render('about',
+        {
+            title: pageTitle,
+            ads: responseBody,
+            message
+        }
+    );
+}
 
 /* GET about view */
-const about = (req, res) => {
-    res.render('about', { title: 'Travlr Getaways', selected: { about: true }, ads });
+const aboutView = (req, res) => {
+    const adsPath = '/api/ads';
+    const requestOptions = {
+        url: `${apiOptions.server}${adsPath}`,
+        method: 'GET',
+        json: {}
+    };
+    console.info('>> aboutController.aboutView calling ' + requestOptions.url);
+    request(
+        requestOptions,
+        (err, { statusCode }, body) => {
+            if (err) {
+                console.error(err);
+            }
+            renderAbout(req, res, body);
+        }
+    );
 };
 
 module.exports = {
-    about
+    aboutView
 };

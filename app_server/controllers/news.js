@@ -1,7 +1,7 @@
 /* Get the trip information from a JSON data file */
 var fs = require('fs');
-var newsItems = JSON.parse(fs.readFileSync('./data/news_items.json', 'utf8'));
-var newsHighlights = JSON.parse(fs.readFileSync('./data/news_highlights.json', 'utf8'));
+var newsItems = JSON.parse(fs.readFileSync('./data/newsitems.json', 'utf8'));
+var newsHighlights = JSON.parse(fs.readFileSync('./data/newshighlights.json', 'utf8'));
 
 /* GET news view */
 const news = (req, res) => {
