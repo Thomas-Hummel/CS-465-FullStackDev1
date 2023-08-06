@@ -1,19 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const ctrlTrips = require('../controllers/trips');
-const ctrlAds = require('../controllers/ads');
+const tripsController = require('../controllers/trips');
+const adsController = require('../controllers/ads');
 
 // Trips
 router
     .route('/trips')
-    .get(ctrlTrips.tripsList);
+    .get(tripsController.tripsList)
+    .post(tripsController.tripsAddTrip);
 router
     .route('/trips/:tripCode')
-    .get(ctrlTrips.tripsFindByCode);
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);
 
 // Ads
 router
     .route('/ads')
-    .get(ctrlAds.adsList);
+    .get(adsController.adsList);
 
 module.exports = router;
